@@ -5,22 +5,18 @@ import kz.almatour1.model.City;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Getter
 @Setter
-public class PlaceDTO {
+public class AccomodationDTO {
     private Long id;
-
     private String name;
-
     private String description;
-
-    private int money;
-
-    private String localTime;
-
-    private String imageUrl;
-    private List<Category> categories;
+    private Timestamp startTime;
+    private Timestamp endTime;
+    private String location;
+    private boolean isStatus;
     private City city;
 }

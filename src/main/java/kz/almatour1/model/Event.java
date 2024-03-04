@@ -26,7 +26,7 @@ public class Event {
     private Timestamp dateTime;
 
     @ManyToOne
-    private Place place;
+    private Accomodation accomodation;
 
     @ManyToOne
     private Category category;

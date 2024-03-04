@@ -4,28 +4,31 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "places")
-public class Place {
+@Table
+public class Accomodation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "place_name")
-    private String placeName;
-
+    private String name;
     private String description;
-
+    private Timestamp startTime;
+    private Timestamp endTime;
     private String location;
+    private boolean isStatus = false;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Category> categories;
 
     @ManyToOne
     private City city;
 
+
+    @ManyToOne
+    private User user;
 }

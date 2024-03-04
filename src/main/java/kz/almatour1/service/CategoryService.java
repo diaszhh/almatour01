@@ -1,7 +1,6 @@
 package kz.almatour1.service;
 
 import kz.almatour1.dto.CategoryDTO;
-import kz.almatour1.dto.PlaceDTO;
 import kz.almatour1.mapper.CategoryMapper;
 import kz.almatour1.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;

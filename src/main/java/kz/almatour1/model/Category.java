@@ -9,13 +9,12 @@ import java.util.Objects;
 @Entity
 @Getter
 @Setter
-@Table(name = "categories")
+@Table
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "category_name")
     private String categoryName;
 
     @Override
